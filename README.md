@@ -7,4 +7,4 @@ Steps to host a static website with custom domain.
 2. Use an Amazon S3 bucket to host a sample website.
 3. Enable static website hosting and direct the domain ton S3 bucket.
 
-   
+   http://sneakshop.click.s3-website-us-east-1.amazonaws.com
