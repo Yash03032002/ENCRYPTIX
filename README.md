@@ -11,4 +11,8 @@ Steps to build a serverless web app using AWS:
 
 1. Create a Git repository and push all the required files and folders to that repository.
 2. Launch the AWS Amplify console. Under the Amplify Hosting Host your web app header, choose Get Started. On the Get started with Amplify Hosting page, select GitHub and choose Continue.
-3.    
+3. Create a Amazon Cognito user pool and integrate an app with your user pool. In the Amazon Cognito console, choose Create user pool. On the Configure sign-in experience page, in the Cognito user pool sign-in options section, select User name. Keep the defaults for the other settings, such as Provider types and do not make any User name requirements selections. Choose Next.
+4. On the Configure security requirements page, keep the Password policy mode as Cognito defaults. You can choose to configure multi-factor authentication (MFA) or choose No MFA and keep other configurations as default. Choose Next.
+5. On the Configure message delivery page, for Email provider, confirm that Send email with Amazon SES - Recommended is selected. In the FROM email address field, select an email address that you have verified with Amazon SES, following the instructions in Verifying an email address identity in the Amazon Simple Email Service Developer Guide.   
+Note: If you don't see the verified email address populating in the dropdown, ensure that you have created a verified email address in the same Region you selected at the beginning of the tutorial.
+6.
