@@ -14,5 +14,18 @@ Steps to build a serverless web app using AWS:
 3. Create a Amazon Cognito user pool and integrate an app with your user pool. In the Amazon Cognito console, choose Create user pool. On the Configure sign-in experience page, in the Cognito user pool sign-in options section, select User name. Keep the defaults for the other settings, such as Provider types and do not make any User name requirements selections. Choose Next.
 4. On the Configure security requirements page, keep the Password policy mode as Cognito defaults. You can choose to configure multi-factor authentication (MFA) or choose No MFA and keep other configurations as default. Choose Next.
 5. On the Configure message delivery page, for Email provider, confirm that Send email with Amazon SES - Recommended is selected. In the FROM email address field, select an email address that you have verified with Amazon SES, following the instructions in Verifying an email address identity in the Amazon Simple Email Service Developer Guide.   
-Note: If you don't see the verified email address populating in the dropdown, ensure that you have created a verified email address in the same Region you selected at the beginning of the tutorial.
-6.
+Note: If you don't see the verified email address populating in the dropdown, ensure that you have created a verified email address in Amazon SES.
+6. Update the website comfig file. Update the cognito section of the file with the correct values for the User pool ID and App Client ID you saved in Steps 8 and 9 in the previous section. The userPoolID is the User pool ID from the User pool overview section, and the userPoolClientID is the App Client ID from the App Integration > App clients and analytics section of Amazon Cognito.
+7. Save the module file and push the changes.
+8. Validate the implimentation. Complete the registration form and choose Let's Ryde. You can use your own email or enter a fake email. Make sure to choose a password that contains at least one upper-case letter, a number, and a special character. Don't forget the password you entered for later. You should see an alert that confirms that your user has been created.
+9. Build a serverless backend. Create a Amazon DynamoDB table. Create an IAM role for your lamda function. Create a Lamda function for handling request. Validate your implimentation.
+10. Deploy a RESTful API. In the Amazon API Gateway console, select APIs in the left navigation pane. Choose Build under REST API. In the Choose the protocol section, select REST. In the Create new API section, select New API. Choose Create API.
+11. Create an Amazon Cognito User Pools Authorizer. Amazon API Gateway uses JSON web tokens (JWT), which are returned by the Amazon Cognito User Pool (created in Module 2) to authenticate the API calls. In this section, we will be creating an Authorizer for the API, so we can make use of the user pool.
+12. Create a new resource within your API. Then create a POST method for that resource and configure it to use a Lambda proxy integration backed by the RequestUnicorn function you created in the first step of this module.
+13. Deploy your API and copy the Invoke URL.
+14. Update the website /js/config.js file  in your website deployment to include the Invoke URL of the stage you just created. You will copy the Invoke URL directly from the top of the stage editor page on the Amazon API Gateway console and paste it into the invokeUrl key of your site's config.js file. Your config file will still contain the updates you made in the previous module for your Amazon Cognito userPoolID, userPoolClientID, and region and push the changes.
+15. Validate your implimentation.
+
+Serverless Web App URl:
+https://master.d1lapbc2qfmaxw.amplifyapp.com/
+ 
