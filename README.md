@@ -1,4 +1,6 @@
-Task 1: Created a basic static website and hosted it on Storage AWS S3 by 
+Task 2: Static Website 
+
+Created a basic static website and hosted it on Storage AWS S3 by 
 configuring a bucket for website hosting, setting up index and error 
 documents, and enabling public access.
 
