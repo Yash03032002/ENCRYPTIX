@@ -9,4 +9,5 @@ comparable cloud.
 
 Steps to host a Personal Portfolio Website on AWS:
 1. Create GitHub repository.
-2. 
+2. Clone repository in your local system and push all the required files and folder to that repository.
+3. For automation cerate a GitHub action    
