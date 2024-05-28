@@ -1,4 +1,6 @@
-Task 1: Build a serverless web app on cloud using service like Lambda, API 
+Task 1: Serverless Web Application 
+
+Build a serverless web app on cloud using service like Lambda, API 
 Gateway, and DynamoDB for dynamic functionality. Use AWS Amplify or 
 SAM for deployment automation.
 
